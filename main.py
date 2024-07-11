@@ -8,7 +8,7 @@ import time
 # ID do AI assistent
 assistant_id = "asst_Ca8fr6xCp8j1mwH6ZvAXNO2O"
 
-logo = "assets/Kuatan_logo.jpg"
+logo = "assets/kuatan_logo.jpg"
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
