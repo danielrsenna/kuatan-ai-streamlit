@@ -21,7 +21,7 @@ st.set_page_config(page_title="Kuatan.AI", page_icon=logo, layout="wide")
 
 st.image(logo, width=100)
 
-if st.sidebar.button("Start Chat"):
+if st.button("Start Chat"):
     st.session_state.start_chat = True
     thread = client.beta.threads.create()
     st.session_state.thread_id = thread.id
