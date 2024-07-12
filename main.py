@@ -20,19 +20,19 @@ if "thread_id" not in st.session_state:
 st.set_page_config(page_title="Kuatan.AI", page_icon=logo, layout="wide")
 
 st.image(logo, width=100)
+st.title("Kuatan.AI Chatbot")
 
 if st.button("Start Chat"):
     st.session_state.start_chat = True
     thread = client.beta.threads.create()
     st.session_state.thread_id = thread.id
 
-st.title("Kuatan.AI Chatbot")
-st.write("Olá! O que você gostaria de explorar hoje?")
-
 if st.button("Exit Chat"):
     st.session_state.messages = [] #clear the chat history
     st.session_state.start_chat = False
     st.session_state.thread_id = None
+
+st.write("Olá! O que você gostaria de explorar hoje?")
 
 if st.session_state.start_chat:
     if "openai_model" not in st.session_state:
