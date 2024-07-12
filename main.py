@@ -7,10 +7,10 @@ import time
 
 # ID do AI assistent
 assistant_id = "asst_Ca8fr6xCp8j1mwH6ZvAXNO2O"
-
 logo = "assets/kuatan_logo.jpg"
-
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+#Aqui começa o app de fato
 
 if "start_chat" not in st.session_state:
     st.session_state.start_chat = False
@@ -19,20 +19,26 @@ if "thread_id" not in st.session_state:
 
 st.set_page_config(page_title="Kuatan.AI", page_icon=logo, layout="wide")
 
-st.image(logo, width=100)
-st.title("Kuatan.AI Chatbot")
+st.sidebar.image(logo, width=100)
+st.title("Kuatan.AI")
+st.caption("Sou um chatbot com IA que te ajuda a cuidar da sua saúde mental 💛")
+st.write("O que você gostaria de explorar hoje?")
 
-if st.button("Start Chat"):
-    st.session_state.start_chat = True
-    thread = client.beta.threads.create()
-    st.session_state.thread_id = thread.id
+col1, col2 = st.columns(2)
 
-if st.button("Exit Chat"):
-    st.session_state.messages = [] #clear the chat history
-    st.session_state.start_chat = False
-    st.session_state.thread_id = None
+with col1:
+    if st.button("Start Chat"):
+        st.session_state.start_chat = True
+        thread = client.beta.threads.create()
+        st.session_state.thread_id = thread.id
 
-st.write("Olá! O que você gostaria de explorar hoje?")
+with col2:
+    if st.button("Exit Chat"):
+        st.session_state.messages = [] #clear the chat history
+        st.session_state.start_chat = False
+        st.session_state.thread_id = None
+
+
 
 if st.session_state.start_chat:
     if "openai_model" not in st.session_state:
