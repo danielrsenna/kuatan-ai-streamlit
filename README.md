@@ -1,15 +1,9 @@
 <div align="center">
 <img src="https://github.com/danielrsenna/kuatan-ai/blob/main/assets/logo%20vector.svg" alt="Kuatan.AI Logo: Uma bicho-preguiça meditando ao lado do nome Kuatan.AI" width="300px">
 
-<hr>
-
 ### **✨ Web App para Saúde Mental ✨**
-[![PyPI version](https://badge.fury.io/py/reflex.svg)](https://badge.fury.io/py/reflex)
-![tests](https://github.com/pynecone-io/pynecone/actions/workflows/integration.yml/badge.svg)
-![versions](https://img.shields.io/pypi/pyversions/reflex.svg)
-[![Documentation](https://img.shields.io/badge/Documentation%20-Introduction%20-%20%23007ec6)](https://reflex.dev/docs/getting-started/introduction/)
-[![Discord](https://img.shields.io/discord/1029853095527727165?color=%237289da&label=Discord)](https://discord.gg/T5WSbC2YtQ)
 </div>
+<hr>
 
 ## Overview
 Repositório para criação e desenvolvimento de um app para saúde mental.
@@ -32,10 +26,10 @@ Para a criação do Web App será utilizado um framework python chamado [Reflex]
 
 ## Roadmap
 
-Primeira Etapa do desenvolvimento será a criação do ChatBot utilizando IA. 
-  - OpenAI Assistants API
-  - Streamlit
-  - 
+1. Criação do ChatBot utilizando IA
+   - OpenAI Assistants API
+   - Streamlit
+
 
 ## Contributors
 
