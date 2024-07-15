@@ -3,3 +3,5 @@ openai
 streamlit
 requests
 supabase
+langchain
+langchain_community
