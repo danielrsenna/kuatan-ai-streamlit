@@ -104,4 +104,4 @@ if st.session_state.start_chat:
                 st.markdown(message.content[0].text.value)
 
 else:
-    st.write("O que você gostaria de explorar hoje?")
+    st.write("O que você gostaria de explorar hoje daniel?")
