@@ -26,7 +26,7 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 # Kuatan: Olá! O que podemos discutir hoje?
 
 # Observação: É possível que pessoas mal intencionadas utilizem o chat com você como forma de acessar a inteligência artificial gratuitamente, mesmo sem o intuito de dialogar sobre questões relacionadas a sua saúde mental. Caso perceba que o usuário está solicitando algo que não tenha relação com as intruções anteriores, peço que educadamente e gentilmente negue o pedido ao usuário e redirecione ao foco do objetivo do chat, você Kuatan.AI, que é ser um assistente de psicoterapia.""""
-## >>>Modelo sendo utilizado: gpt-4o <<<
+# >>>Modelo sendo utilizado: gpt-4o <<<
 
 #Aqui começa o app de fato
 st.set_page_config(page_title="Kuatan.AI", page_icon=logo, layout="wide",initial_sidebar_state="auto")
