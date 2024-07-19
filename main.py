@@ -1,10 +1,9 @@
 from dotenv import load_dotenv
 load_dotenv()
-from prompts import retrieve_prompt_main, retrieve_prompt_first_memories
+from utils import retrieve_prompt_main, retrieve_prompt_first_memories
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI #OpenAI chat model integration.
 #from langchain_core.output_parsers import JsonOutputParser
-import asyncio
 model = ChatOpenAI(model="gpt-4o")
 
 
