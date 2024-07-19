@@ -36,7 +36,8 @@ messages_history = ""
 while True:
     user_input = input("Para sair digite exit. Digite aqui: ")
     if user_input.lower() == 'exit':
-        #chamar prompt que gera memória com base na sessão (ainda preciso fazer) e salvar no Supabase user_memories
+        #chamar prompt que gera memória com base nas mensagens da sessão (ainda preciso fazer) e salvar no Supabase user_memories
+        #chamar prompt que cria título da sessão (ainda preciso fazer) e salvar no Supabase user_memories
         break
     main_chain_response = main_chain.invoke({"memories":memories,"messages_history":messages_history,"input":user_input})
     messages_history += f"Human: {user_input}\n"
