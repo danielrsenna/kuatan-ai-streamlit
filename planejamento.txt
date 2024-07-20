@@ -1,0 +1,14 @@
+1 - Usuário faz login (auth)
+   1.1 Fetch user_id da table users do schema auth
+2 - Usuário inicia nova sessão de chat
+   2.1 Gerar novo session_id usando biblioteca uuid
+   2.2 Insert row na table chatbot_sessions com o session_id gerado
+ 3 - Usuário envia mensagem para o bot
+   3.1 Langchain iniciado -> ChatHistory (in memory)
+   3.2 Insert row na table chatbot_messages (message id gerado automaticamente pelo Supabase)
+       3.2.1 Inserir linha passando o session_id e user_id adquiridos nas etapas 1 e 2
+   3.3 
+ 4 - IA responde usuário
+   4.1 Mensagem entra na InMemory do langchain
+   4.2 Insert row na table chatbot_messages (message id gerado automaticamente pelo Supabase)
+ 5 - Processo se repete até que usuário encerre o chat. 
