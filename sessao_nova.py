@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from utils import create_session, get_memories, save_message, retrieve_prompt_main, retrieve_prompt_first_memories
+from utils import create_session, get_memories, save_message, retrieve_prompt_main
 
 from supabase import create_client
 url = os.environ.get("SUPABASE_URL")
@@ -28,7 +28,7 @@ main_prompt = ChatPromptTemplate.from_template(prompt_main_content)
 main_chain = main_prompt | model
 
 response_get_memories = get_memories(user_id)
-string_memories = str(response_get_memories.data[0]["memories"])
+string_memories = str(response_get_memories.data[0]["memories"]) #e quando tiver mais de uma linha de memórias??????????
 memories = ""
 memories += f"{string_memories}\n"
 
