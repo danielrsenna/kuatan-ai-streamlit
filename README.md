@@ -26,9 +26,27 @@ Para a criação do Web App será utilizado um framework python chamado [Reflex]
 
 ## Roadmap
 
-1. Criação do ChatBot utilizando IA
-   - OpenAI Assistants API
-   - Streamlit
+1. Criação do ChatBot com AI Assistants
+   - OpenAI Assistants API ✅
+   - Streamlit ✅
+2. Chatbot com Langchain ✅
+   - Usando modelo da OpenAI ✅
+   - Usando outros modelos (via Groq ou Together AI)
+      - LLama 70b
+      - Maritaca
+3. Histórico de Sessões e Mensagens ✅
+   - Supabase ✅
+4. Registro e uso de "Memórias" ⚠️
+   -  Supabase ✅
+   -  Memórias geradas na criação do perfil ✅
+   -  Memórias geradas a partir da sessão -> não testado ⚠️
+      -  Uso de memórias geradas pelas sessões ⚠️
+5. Criação App Reflex
+   - Autenticação com Supabase (login)
+   - Interface para chat
+   - Interface para visualizar e acessar histórico de chats anteriores
+      - E continuar uma sessão de onde parou
+   - Interface Minhas Memórias (permitir edição direto via app)
 
 
 ## Contributors
